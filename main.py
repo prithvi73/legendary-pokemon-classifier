@@ -5,4 +5,6 @@ from sklearn.ensemble import RandomForestClassifier
 
 # Loading the data into a dataframe
 df = pd.read_csv("Data/Pokemon.csv")
-# df.head()
+df.head()
+
+df = df.drop_duplicates(subset=["#"], keep="first")
