@@ -19,3 +19,5 @@ df = df.drop(columns=["Legendary"])
 
 X = df.to_numpy() # Features matrix
 
+# Converting our target matrix values from false and true to 0s and 1s
+y = y.astype(int)
