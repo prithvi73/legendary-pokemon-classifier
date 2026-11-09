@@ -12,3 +12,10 @@ df = df.drop_duplicates(subset=["#"], keep="first")
 
 # Dropping unnecessary columns
 df = df.drop(columns=["#", "Name", "Type 1", "Type 2", "Generation"])
+
+# Isolating our features and target matrix
+y = df["Legendary"] # Target matrix
+df = df.drop(columns=["Legendary"])
+
+X = df.to_numpy() # Features matrix
+

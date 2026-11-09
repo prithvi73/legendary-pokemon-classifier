@@ -1,5 +1,6 @@
 .venv/
 __pycache__/
 *.code-workspace
+.vscode
 project_roadmap.md
 Data/
