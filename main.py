@@ -5,6 +5,10 @@ from sklearn.ensemble import RandomForestClassifier
 
 # Loading the data into a dataframe
 df = pd.read_csv("Data/Pokemon.csv")
-df.head()
+# df.head()
 
+# Dropping megas and primal reversions or any alternate forms
 df = df.drop_duplicates(subset=["#"], keep="first")
+
+# Dropping unnecessary columns
+df = df.drop(columns=["#", "Name", "Type 1", "Type 2", "Generation"])
