@@ -21,3 +21,7 @@ X = df.to_numpy() # Features matrix
 
 # Converting our target matrix values from false and true to 0s and 1s
 y = y.astype(int)
+
+# Splitting the data into training and testing data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
