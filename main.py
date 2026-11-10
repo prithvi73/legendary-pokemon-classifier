@@ -40,3 +40,10 @@ y_pred = clf.predict(X_test_scaled)
 score = accuracy_score(y_pred, y_test)
 print(score)
 
+# Seeing the model's prediction on individual piece of data
+test_subject = X_test_scaled[0:1]
+real_answer = y_test.to_numpy()[0].astype(bool)
+predicted_answer = clf.predict(test_subject)[0].astype(bool)
+
+print(f"Real Answer : {real_answer}")
+print(f"Predicted Answer : {predicted_answer}") 
